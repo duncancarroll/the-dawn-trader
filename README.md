@@ -10,6 +10,7 @@ See: [The Dawn Treader](https://www.amazon.com/Voyage-Dawn-Treader-Chronicles-Na
 
 ## Configure
 - Set weights and weekly spend amount according to preference in `ASSETS_AND_WEIGHTS` and `SPEND_PER_RUN`
+- Set `ALWAYS_BUY_MINIMUM` to False if you don't want to overspend, or leave at True if you still want to buy even when the minimum amount exceeds the weight you set.
 - Set `LOCAL_WALLET_IDS` to empty if you don't want it to transfer your coins out every month, or enter the correct ticker symbols and Kraken string names of your wallets that you want to transfer each coin into (must be created as standard outbound wallets in Kraken web UI first.)
 - Create a Kraken API key with permission to buy coins and add `KRAKEN_KEY` and `KRAKEN_SECRET` to env vars.
 - `$ virtualenv venv`
