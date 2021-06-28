@@ -1,10 +1,7 @@
 <img src="https://vignette3.wikia.nocookie.net/narnia/images/9/91/Narniadawntreader.png/revision/latest?cb=20101128130243" width=500/>
 
-# Background
-I got tired of missing the latest crypto wave so I wrote this script to automatically buy a fixed USD amount once a week from a weighted list of specified coins.  The only thing you have to do manually is wire USD into your Kraken account once a month.
-
-# What This Is
-An automated weekly trading script for the [Kraken Exchange API](https://www.kraken.com/help/api) which spends a fixed dollar amount each week on a basket of weighted coins.  Will also transfer all coins into a specified wallet of your choice every month, so as not to keep them on the exchange.
+# The Dawn Trader
+I got tired of missing the latest crypto wave so I wrote this script to automatically buy a fixed USD amount once a week from a weighted list of specified coins.  The only thing you have to do manually is wire USD into your Kraken account once a month.  Will also transfer all coins into a specified wallet of your choice every month, so as not to keep them on the exchange.  Uses the [Kraken Exchange API](https://www.kraken.com/help/api)
 See: [The Dawn Treader](https://www.amazon.com/Voyage-Dawn-Treader-Chronicles-Narnia-ebook/dp/B001I45UEI) (C.S. Lewis)
 
 
