@@ -5,6 +5,8 @@ An automated weekly trading script for the [Kraken Exchange API](https://www.kra
 
 ## Configure
 - Set weights and weekly spend amount according to preference.
+- `$ ./venv/bin/activate`
+- `$ pip install -r requirements.txt`
 
 ## Deploy
 - Add your Kraken API key, etc as environment variables, ensure it has proper permissions.
