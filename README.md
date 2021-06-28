@@ -1,13 +1,16 @@
 <img src="https://vignette3.wikia.nocookie.net/narnia/images/9/91/Narniadawntreader.png/revision/latest?cb=20101128130243" width=500/>
 
 # The Dawn Trader
-An Automated Trading Bot for the [Kraken Exchange API](https://www.kraken.com/help/api)
+An automated weekly trading script for the [Kraken Exchange API](https://www.kraken.com/help/api) which spends a fixed dollar amount each week on a basket of weighted coins.
 
-## Rules
-Every day (cron job):
-- Do we have USD in our account? If so:
-  - Calculate the amount we have available to buy (# days since last buy / total for the month)
-  - Rule: If the price is lower than the last time we bought, execute a buy.
+## Configure
+- Set weights and weekly spend amount according to preference.
+
+## Deploy
+- Add your Kraken API key, etc as environment variables, ensure it has proper permissions.
+- Remove my Sentry API key (whoops)
+- Digital Ocean has a nice 1-click app deploy via commit hook which works great.
+- Note: Script runs as a looping thread w/Python scheduler to keep things simple.
 
 See: [The Dawn Treader](https://www.amazon.com/Voyage-Dawn-Treader-Chronicles-Narnia-ebook/dp/B001I45UEI) (C.S. Lewis)
 
