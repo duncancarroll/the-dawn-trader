@@ -1,8 +1,5 @@
 #!/usr/bin/env python
 
-# NOTE: Assumes limit orders. Margin positions are not taken into account!
-# NOTE: floating-point rounding errors not taken into account!
-#
 from decimal import Decimal, ROUND_DOWN
 from pathlib import Path
 from sentry_sdk import capture_message
@@ -22,8 +19,8 @@ SPEND_PER_RUN = 150.00
 USD_PRECISION = Decimal('0.01')
 ALWAYS_BUY_MINIMUM = True
 SLEEP_TIME = 60                     # seconds
-IS_DEBUG = True
-KEY_FILE = "kraken.key"
+IS_DEBUG = True                     # For safety is set to true + must be overriden by env var in production
+KEY_FILE = "kraken.key"             # Is created via env vars if not exist
 sentry_sdk.init("https://6494510f79c944c69e5ff878416318f8@o559550.ingest.sentry.io/5694448", traces_sample_rate=1.0)
 
 # Main list of currencies to purchase
