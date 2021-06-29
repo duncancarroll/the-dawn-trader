@@ -2,6 +2,7 @@
 
 # The Dawn Trader
 I got tired of missing the latest crypto wave so I wrote this script to automatically buy a fixed USD amount once a week from a weighted list of specified coins.  The only thing you have to do manually is wire USD into your Kraken account once a month.  Will also transfer all coins into a specified wallet of your choice every month, so as not to keep them on the exchange.  Uses the [Kraken Exchange API](https://www.kraken.com/help/api)
+
 See: [The Dawn Treader](https://www.amazon.com/Voyage-Dawn-Treader-Chronicles-Narnia-ebook/dp/B001I45UEI) (C.S. Lewis)
 
 
