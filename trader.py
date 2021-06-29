@@ -211,7 +211,7 @@ if "IS_DEBUG" in os.environ:
 
 # Schedule the job if we are on production, otherwise run it immediately (but don't actually execute trades)
 if not IS_DEBUG:
-    schedule.every().monday.at("09:00").do(buy)         # Buy crypto
+    schedule.every().monday.at("05:00").do(buy)         # Buy crypto
     schedule.every(4).weeks.do(transfer)    # Transfer to local wallet once a month
     print("Waiting for next execution...")
     while True:
