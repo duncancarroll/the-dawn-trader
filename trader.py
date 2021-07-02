@@ -26,9 +26,9 @@ sentry_sdk.init("https://6494510f79c944c69e5ff878416318f8@o559550.ingest.sentry.
 # Main list of currencies to purchase
 ASSETS_AND_WEIGHTS = {
     "XETH": 1,          # ETH
-    "XXBT": 1,          # BTC
-    "LINK": 0.5,          # Chainlink
-    "XDG": 0.4,         # Doge
+    "XXBT": 0.5,          # BTC
+    "LINK": 0.6,          # Chainlink
+    "XDG": 0.3,         # Doge
     "ADA": 0.3,         # Cardano
     "UNI": 0.2,         # Uniswap
     "XTZ": 0.1,           # Tezos
