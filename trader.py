@@ -15,15 +15,16 @@ import time
 
 BASE_CURRENCY = "USD"
 BASE_CURRENCY_Z = "ZUSD"
-SPEND_PER_RUN = 150.00
 USD_PRECISION = Decimal('0.01')
-ALWAYS_BUY_MINIMUM = True
-SLEEP_TIME = 60                     # seconds
-IS_DEBUG = True                     # For safety is set to true + must be overriden by env var in production
-KEY_FILE = "kraken.key"             # Is created via env vars if not exist
-sentry_sdk.init("https://6494510f79c944c69e5ff878416318f8@o559550.ingest.sentry.io/5694448", traces_sample_rate=1.0)
+SPEND_PER_RUN = 150.00                      # Max base currency to spend per run
+ALWAYS_BUY_MINIMUM = True                   # Whether to buy or not when the minimum purchase amount of a coin exceeds the amount specified by your weight.  Warning: Setting to True will exceed SPEND_PER_RUN.
+SLEEP_TIME = 60                             # Seconds the scheduler thread will sleep before checking if it needs to run
+IS_DEBUG = True                             # For safety is set to true + must be overriden by env var in production
+KEY_FILE = "kraken.key"                     # Created via env vars if not exist.  Warning: This is currently stored in the filesystem!
+SENTRY_URL = os.environ.get("SENTRY_URL")   # Replace with your own Sentry API endpoint
+sentry_sdk.init(SENTRY_URL, traces_sample_rate=1.0)
 
-# Main list of currencies to purchase
+# Which currencies to purchase and a weight per coin (not percent; does not need to sum to 1)
 ASSETS_AND_WEIGHTS = {
     "XETH": 1,          # ETH
     "LINK": 1,          # Chainlink
@@ -46,6 +47,7 @@ ASSETS_AND_WEIGHTS = {
     # "SC": 0.1           # Siacoin
 }
 
+# Optional local wallets to move money into at the end of each month, so as not to keep on the Exchange.
 LOCAL_WALLET_IDS = {
     "XXBT": "XXBT - Guarda Wallet",
     "XETH": "ETH - Guarda Wallet",
