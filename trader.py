@@ -13,8 +13,8 @@ import time
 import schedule
 import time
 
-BASE_CURRENCY = "USD"
-BASE_CURRENCY_Z = "ZUSD"
+BASE_CURRENCY = "USDT"
+BASE_CURRENCY_Z = "USDT"
 USD_PRECISION = Decimal('0.01')
 SPEND_PER_RUN = 150.00                      # Max base currency to spend per run
 ALWAYS_BUY_MINIMUM = True                   # Whether to buy or not when the minimum purchase amount of a coin exceeds the amount specified by your weight.  Warning: Setting to True will exceed SPEND_PER_RUN.
@@ -26,13 +26,13 @@ sentry_sdk.init(SENTRY_URL, traces_sample_rate=1.0)
 
 # Which currencies to purchase and a weight per coin (not percent; does not need to sum to 1)
 ASSETS_AND_WEIGHTS = {
-    "XETH": 1,          # ETH
-    "LINK": 1,          # Chainlink
-    "XXBT": 0.3,          # BTC
-    "XDG": 0.3,         # Doge
+    "ETH": 1,          # ETH
+    "LINK": 0.5,          # Chainlink
+    "XBT": 0.5,          # BTC
     "ADA": 0.3,         # Cardano
-    "UNI": 0.2,         # Uniswap
-    "XTZ": 0.1,           # Tezos
+    #"XDG": 0.0,         # Doge
+    #"UNI": 0.0,         # Uniswap
+    #"XTZ": 0.0,           # Tezos
     #"XLTC": 0.2,        # Litecoin
     #"DOT": 0.2,         # Polkadot
     #"XXRP": 0.5,         # Ripple   (Lawsuit)
@@ -221,5 +221,5 @@ if not IS_DEBUG:
         time.sleep(SLEEP_TIME)    # Sleep for a minute
 else:
     # transfer()
-    # buy()
+    buy()
     pass
