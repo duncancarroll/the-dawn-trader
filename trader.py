@@ -13,8 +13,8 @@ import time
 import schedule
 import time
 
-BASE_CURRENCY = "USDT"
-BASE_CURRENCY_Z = "USDT"
+BASE_CURRENCY = "USD"
+BASE_CURRENCY_Z = "ZUSD"
 USD_PRECISION = Decimal('0.01')
 SPEND_PER_RUN = 150.00                      # Max base currency to spend per run
 ALWAYS_BUY_MINIMUM = True                   # Whether to buy or not when the minimum purchase amount of a coin exceeds the amount specified by your weight.  Warning: Setting to True will exceed SPEND_PER_RUN.
@@ -28,25 +28,16 @@ sentry_sdk.init(SENTRY_URL, traces_sample_rate=1.0)
 ASSETS_AND_WEIGHTS = {
     "ETH": 1,          # ETH
     "XBT": 0.3,          # BTC
+    "MATIC": 0.3,       # Polygon (Matic)
+    "SOL": 0.3,             # Solana
+    "ALGO":0.3,             # Algorand
     "LINK": 0.3,          # Chainlink
     "ADA": 0.3,         # Cardano
     "DOT": 0.3,         # Polkadot
-    "MATIC": 0.3,       # Polygon (Matic)
-"SOL": 0.3,             # Solana
-"ALGO":0.3,             # Algorand
+    "XTZ": 0.2,           # Tezos
     #"XDG": 0.0,         # Doge
     #"UNI": 0.0,         # Uniswap
-     "XTZ": 0.1,           # Tezos
     #"XLTC": 0.2,        # Litecoin
-    # "XXLM": 0.1,        # Lumen
-    # "TRX": 0.1,         # Tron
-    # "EOS": 0.1,         # EOS
-    # "ALGO": 0.1,        # Algorand
-    # "GRT": 0.1,         # The Graph
-    # "BAT": 0.1,         # Basic Attention Token
-    # "MANA": 0.1,        # Decentraland (MANA)
-    # "ICX": 0.1,         # Icon
-    # "SC": 0.1           # Siacoin
 }
 
 # Optional local wallets to move money into at the end of each month, so as not to keep on the Exchange.
@@ -59,7 +50,8 @@ LOCAL_WALLET_IDS = {
     "ADA": "Cardano - Guarda Wallet",
     "DOT": "DOT Guarda Wallet",
     "UNI": "UNI - Guarda Wallet",
-    "LINK": "LINK Guarda Wallet"
+    "LINK": "LINK Guarda Wallet",
+    "ALGO": "Algorand Guarda Wallet"
 }
 
 def checkBalance(k):
