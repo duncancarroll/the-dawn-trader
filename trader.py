@@ -26,8 +26,8 @@ sentry_sdk.init(SENTRY_URL, traces_sample_rate=1.0)
 
 # Which currencies to purchase and a weight per coin (not percent; does not need to sum to 1)
 ASSETS_AND_WEIGHTS = {
-    "ETH": 1,          # ETH
-    "XBT": 0.3,          # BTC
+    "XETH": 1,          # ETH
+    "XXBT": 0.3,          # BTC
     "MATIC": 0.3,       # Polygon (Matic)
     "SOL": 0.3,             # Solana
     "ALGO":0.3,             # Algorand
